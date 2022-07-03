@@ -1,8 +1,8 @@
 from PIL import Image
 
 img  = Image.open("test.jpg")
-#img.show()
-width = int(input('Podaj koordynat x:'))
-height = int(input('Podaj koordynat y:'))
+width, height = img.size
+x = int(input('Podaj koordynat x:'))
+y = int(input('Podaj koordynat y:'))
 pixel_values = list(img.getdata())
-print(pixel_values[width*height])
+print(pixel_values[width*y+x])
