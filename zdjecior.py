@@ -1,3 +1,4 @@
+from os import close
 from PIL import Image
 from pynput.mouse import Listener
 from pynput.mouse import Controller
@@ -14,9 +15,12 @@ def on_click(x, y, button, pressed):
     if pressed:
         print(mouse.position)
         print(pixel_values[width*y+x]) #co to kurwa jest
+    return True
 
 with Listener(on_click = on_click) as listener:
     listener.join()
+
+
 
 
 
