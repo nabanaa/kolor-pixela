@@ -33,3 +33,9 @@ with Listener(on_move = mouse_move) as listener:
 while True:
     if keyboard.press(Key.f3):
         quit()
+
+
+# x = int(input('Podaj koordynat x:'))
+# y = int(input('Podaj koordynat y:'))
+# pixel_values = list(img.getdata())
+#print(pixel_values[width*y+x])
