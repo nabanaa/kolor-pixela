@@ -28,8 +28,11 @@ while True:
     if keyboard.press(Key.f3):
         quit()
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b814e54dcbda5966367bd70b78e0a7fcceb040b0
 
 
 
