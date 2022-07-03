@@ -5,6 +5,7 @@ mouse = Controller()
 
 img  = Image.open("test.jpg")
 pixel_values = list(img.getdata())
+img.show()
 
 def on_click(x, y, button, pressed):
     width, height = img.size
