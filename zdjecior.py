@@ -9,7 +9,8 @@ pixel_values = list(img.getdata())
 img.show()
 
 def on_click(x, y, button, pressed):
-    width, height = img.size
+    width = mouse.position[0]
+    height = mouse.position[1]
     if pressed:
         print(mouse.position)
         print(pixel_values[width*height]) #co to kurwa jest
@@ -24,4 +25,4 @@ with Listener(on_click = on_click) as listener:
 # x = int(input('Podaj koordynat x:'))
 # y = int(input('Podaj koordynat y:'))
 # pixel_values = list(img.getdata())
-print(pixel_values[width*y+x])
+#print(pixel_values[width*y+x])
