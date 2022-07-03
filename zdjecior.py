@@ -13,7 +13,6 @@ def on_click(x, y, button, pressed):
     height = mouse.position[1]
     if pressed:
         print(mouse.position)
-        print(pixel_values[width*height]) #co to kurwa jest
         print(pixel_values[width*y+x]) #co to kurwa jest
 
 with Listener(on_click = on_click) as listener:
