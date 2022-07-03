@@ -1,4 +1,4 @@
-from os import close
+#from os import close
 from PIL import Image
 from pynput.mouse import Listener
 from pynput.mouse import Controller
@@ -12,31 +12,24 @@ img  = Image.open("test.jpg")
 pixel_values = list(img.getdata())
 img.show()
 
+def mouse_move(x, y):
+    print(x, y)
+
 
 def on_click(x, y, button, pressed):
     width = mouse.position[0]
-    height = mouse.position[1]
+    #height = mouse.position[1]
     if pressed:
         print(mouse.position)
         print(pixel_values[width*y+x]) #co to kurwa jest
     return True
 
-with Listener(on_click = on_click) as listener:
+#with Listener(on_click = on_click) as listener:
+    #listener.join()
+
+with Listener(on_move = mouse_move) as listener:
     listener.join()
 
 while True:
     if keyboard.press(Key.f3):
         quit()
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> b814e54dcbda5966367bd70b78e0a7fcceb040b0
-
-
-
-# x = int(input('Podaj koordynat x:'))
-# y = int(input('Podaj koordynat y:'))
-# pixel_values = list(img.getdata())
-#print(pixel_values[width*y+x])
